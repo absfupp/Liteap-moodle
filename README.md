@@ -70,7 +70,7 @@ The LiteAp theme directory structure is organized for easy customization and ext
 - **Features:**
   - Editable content (but not layout)
   - Optional section
-  - 
+    
 ### 5. Events Section
 - **Data Source:**
   - Moodle calendar events (site, course, category types)
