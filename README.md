@@ -14,9 +14,9 @@ LiteAp is a design-centric, customizable Moodle theme for educational institutio
 
 ## Requirements
 
-- Moodel >= 5.0 (**Preferred)
-- #Note: Works with Moodle 4.5.7 or lower (** might cause CSS Styling issues)
-- Modern browser with ES6+ support
+- **Moodle >= 5.0** (**Preferred**)
+- **Note:** Works with Moodle 4.5.7 or lower (may cause CSS styling issues)
+- Modern browser with **ES6+** support
   
 ## Theme Directory Structure
 
