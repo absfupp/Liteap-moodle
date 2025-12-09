@@ -1,5 +1,5 @@
 [![Version](https://img.shields.io/badge/version-0.0.23-green.svg)]()
-[![GitHub issues](https://img.shields.io/bitbucket/issues/absfupp/Liteap-moodle)](https://github.com/absfupp/Liteap-moodle/issues)
+[![GitHub issues](https://img.shields.io/github/issues/absfupp/Liteap-moodle)](https://github.com/absfupp/Liteap-moodle/issues/)
 [![GitHub stars](https://img.shields.io/github/stars/absfupp/Liteap-moodle.svg?style=social&label=Star&maxAge=2592000)](https://github.com/absfupp/Liteap-moodle/stargazers/)
 
 # LiteAp Moodle Theme
