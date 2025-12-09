@@ -1,0 +1,273 @@
+{{> theme_boost/head }}
+    
+ <body {{{ bodyattributes }}}>
+    {{> core/local/toast/wrapper}}
+    <div id="page-wrapper" class="d-print-block">
+        {{{ output.standard_top_of_body_html }}}
+            {{> theme_liteap/navbar }}
+            <div id="topofscroll" class="main-inner drawer-toggles d-flex" style="padding: 0px;margin: 0px;">
+                    {{#courseindex}}
+                        <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
+                            <button
+                                class="btn icon-no-margin"
+                                data-toggler="drawers"
+                                data-action="toggle"
+                                data-target="theme_boost-drawers-courseindex"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="{{#str}}opendrawerindex, core{{/str}}">
+                                <span class="sr-only">{{#str}}opendrawerindex, core{{/str}}</span>
+                                {{#pix}} t/index_drawer, moodle {{/pix}}
+                            </button>
+                        </div>
+                    {{/courseindex}}
+                    {{#hasblocks}}
+                        <div class="drawer-toggler drawer-right-toggle">
+                            <button
+                                class="btn icon-no-margin"
+                                data-toggler="drawers"
+                                data-action="toggle"
+                                data-target="theme_boost-drawers-blocks"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="{{#str}}opendrawerblocks, core{{/str}}">
+                                <span class="sr-only">{{#str}}opendrawerblocks, core{{/str}}</span>
+                                <span class="dir-rtl-hide">{{#pix}}t/blocks_drawer, core{{/pix}}</span>
+                
+                            </button>
+                        </div>
+                    {{/hasblocks}}
+                </div> 
+                {{#heroenabled}} <!-- Hero Section --> 
+                <section id="hero" class="hero section">
+                    <div class="hero-container" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{hero_background}}') center/cover no-repeat; min-height: 80vh;">
+                        <div class="hero-content">
+                            <h1>{{hero_title}}</h1>
+                            <p>{{hero_description}}</p>
+                            <div class="cta-buttons">
+                                <a href="{{apply_link}}" class="btn-apply">{{apply_text}}</a>
+                                <a href="{{tour_link}}" class="btn-tour">{{tour_text}}</a>
+                                <a href="{{tour_link1}}" class="btn-tour">{{tour_text1}}</a>
+                            </div>
+                            {{#announcement_enabled}}
+                            <div class="announcement">
+                                <div class="announcement-badge">{{announcement_badge}}</div>
+                                <p>{{announcement_text}}</p>
+                            </div>
+                            {{/announcement_enabled}}
+                        </div>
+                    </div>
+
+                    {{#highlights_enabled}}
+                    <div class="highlights-container containerx">
+                        <div class="row gy-4">
+                            {{#highlights}}
+                            <div class="col-md-4">
+                                <div class="highlight-item">
+                                    <div class="icon">
+                                        <i class="{{icon}}"></i>
+                                    </div>
+                                    <h3>{{title}}</h3>
+                                    <p>{{description}}</p>
+                                </div>
+                            </div>
+                            {{/highlights}}
+                        </div>
+                    </div>
+                    {{/highlights_enabled}}
+
+                    {{#event_enabled}}
+                    <div class="event-banner">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-2">
+                                    <div class="event-date">
+                                        <span class="month">{{event_month}}</span>
+                                        <span class="day">{{event_day}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>{{event_title}}</h3>
+                                    <p>{{event_description}}</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{{event_link}}" class="btn-register">{{event_button}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/event_enabled}}
+                </section>
+                {{/heroenabled}} <!-- /Hero Section -->
+                                
+                {{#aboutenabled}} <!-- About Section -->
+                <section id="about" class="about section">
+                    <div class="containerx">
+                        <div class="row gy-5">
+                            <div class="col-lg-6">
+                                <div class="content">
+                                    <h3>{{about_title}}</h3>
+                                    <p>{{about_description}}</p>
+
+                                    {{#stats_enabled}}
+                                    <div class="stats-row">
+                                        {{#stats}}
+                                        <div class="stat-item">
+                                            <div class="number">{{number}}</div>
+                                            <div class="label">{{label}}</div>
+                                        </div>
+                                        {{/stats}}
+                                    </div>
+                                    {{/stats_enabled}}
+
+                                    {{#mission_enabled}}
+                                    <div class="mission-statement">
+                                        <p><em>{{mission_text}}</em></p>
+                                    </div>
+                                    {{/mission_enabled}}
+
+                                    {{#cta_enabled}}
+                                    <a href="{{cta_link}}" class="btn-learn-more">
+                                        {{cta_text}}
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                    {{/cta_enabled}}
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="image-wrapper">
+                                    <img src="{{about_image}}" alt="{{about_image_alt}}" class="img-fluid">
+                                    {{#badge_enabled}}
+                                    <div class="experience-badge">
+                                        <div class="years">{{badge_years}}</div>
+                                        <div class="text">{{badge_text}}</div>
+                                    </div>
+                                    {{/badge_enabled}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {{/aboutenabled}} <!-- /About Section -->
+                
+                {{#featuredenabled}} <!-- Featured Programs Section -->
+                <section id="featured-programs" class="featured-programs section">
+                    <!-- Section Title -->
+                    <div class="container section-title">
+                        <h2>{{section_title}}</h2>
+                        <p>{{section_description}}</p>
+                    </div>
+
+                    <div class="containerx">
+                        <div class="featured-programs-wrapper">
+
+                            {{! Overview Section }}
+                            {{#overview_enabled}}
+                            <div class="programs-overview">
+                                <div class="overview-content">
+                                    <h2>{{overview_title}}</h2>
+                                    <p>{{overview_description}}</p>
+                                    <div class="overview-stats">
+                                        {{#overview_stats}}
+                                        <div class="stat-item">
+                                            <span class="stat-number">{{number}}</span>
+                                            <span class="stat-label">{{label}}</span>
+                                        </div>
+                                        {{/overview_stats}}
+                                    </div>
+                                </div>
+                                <div class="overview-image">
+                                    <img src="{{overview_image}}" alt="{{overview_title}}" class="img-fluid">
+                                </div>
+                            </div>
+                            {{/overview_enabled}}
+
+                            {{! Programs Showcase }}
+                            <div class="programs-showcase">
+                                {{! Featured Card }}
+                                <div class="program-card featured-program">
+                                    <div class="card-image">
+                                        <img src="{{featured_card.image}}" alt="{{featured_card.title}}" class="img-fluid">
+                                        <div class="program-badge">
+                                            <i class="fa fa-star"></i>
+                                            <span>Featured</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="program-category">{{featured_card.category}}</div>
+                                        <h3>{{featured_card.title}}</h3>
+                                        <p>{{featured_card.description}}</p>
+                                        <div class="program-meta">
+                                            <div class="meta-item"><i class="fa fa-clock"></i><span>{{featured_card.duration}}</span></div>
+                                            <div class="meta-item"><i class="fa fa-award"></i><span>{{featured_card.type}}</span></div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="{{featured_card.link}}" class="learn-more">Learn More</a>
+                                            <div class="enrollment"><i class="fa fa-people"></i><span>{{featured_card.enrollment_count}} enrolled</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{! Program List }}
+                                {{#has_program_list}}
+                                <div class="programs-list">
+                                    {{#program_list_items}}
+                                    <div class="program-item">
+                                        <div class="item-visual">
+                                            <img src="{{image}}" alt="{{title}}" class="img-fluid">
+                                        </div>
+                                        <div class="item-details">
+                                            <div class="item-category">{{category}}</div>
+                                            <h4>{{title}}</h4>
+                                            <p>{{description}}</p>
+                                            <div class="item-info">
+                                                <span>{{duration}}</span>
+                                                <span>{{type}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-action">
+                                            <a href="{{link}}"><i class="bi bi-arrow-right-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    {{/program_list_items}}
+                                </div>
+                                {{/has_program_list}}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {{/featuredenabled}} <!-- /Featured Programs Section -->
+                
+                <section id="main-content" class="main-content section">
+                    <div id="page" class="containerx d-print-block">
+                        {{{ output.main_content }}}
+                    </div>
+                </section>
+                {{#faqenabled}} <!-- /FAQ Section -->
+                <section id="faq" class="scale-up scale-up-show">
+                    <div class="containerx row gy-5">
+                        <h2>{{#str}}faq, theme_liteap{{/str}}</h2>
+                        <div class="accordion" id="accordion-faq">
+                            {{#faq}}
+                                <div class="accordion-item mb-1">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button {{^active}}collapsed{{/active}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{{id}}}" aria-expanded="true" aria-controls="collapse-{{{id}}}">
+                                            {{{question}}}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse-{{{id}}}" class="accordion-collapse collapse {{#active}}show{{/active}}" data-bs-parent="#accordion-faq">
+                                        <div class="accordion-body">
+                                            {{{answer}}}
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/faq}}
+                        </div>
+                    </div>
+                </section>
+                {{/faqenabled}} <!-- /FAQ Section -->
+
+            {{> theme_liteap/footer }}
+     </div>
+ </body>

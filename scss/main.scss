@@ -1,0 +1,303 @@
+@import "../../boost/scss/preset/default";
+@import "default/transitions";
+@import "default/navbar";
+@import "default/footer";
+@import "default/frontpage";
+@import "default/login";
+
+body {
+    background-color: $background !important; /* stylelint-disable-line */
+
+    #page.drawers {
+       padding: 3rem 0 0;
+    }
+    #accessibilitybar {
+        display: block;
+    }
+    // .secondary-navigation.ap {
+    //     margin-top: 30px;
+    // }
+    &.pagelayout-incourse {
+        #region-main a:not(.btn),
+        .section-navigation > a:not(.btn) {
+            text-decoration: underline;
+        }
+    }
+}
+.secondary-navigation.ap {
+  width: 100%;
+  max-width: 100% !important;
+}
+#page {
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #6a737b #f8f9fa;
+  z-index: 50;
+  .drawer-toggles .drawer-right-toggle, .drawer-toggles .drawer-left-toggle {
+      top: calc(99vh - (100px * 6));
+      z-index: 101 !important;
+  }
+  .drawer.drawer-right.show,.drawer.drawer-left.show{
+      top: calc(99vh - (100px * 6))
+  }
+}
+#page-header {
+    max-width: inherit;
+    padding: 0;
+    margin:0;
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    #page-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .courseheader {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .page-header-headings {
+        background-color: initial;
+    }
+}
+.containerx {
+    padding: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.containerx,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  max-width: 95%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fluid.tertiary-navigation {
+    max-width: 100%;
+}
+@include media-breakpoint-up(md) {
+    .pagelayout-standard #page.drawers .main-inner,
+    body.limitedwidth #page.drawers .main-inner,
+    #page.drawers .main-inner,
+    .containerx,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 95%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header-maxwidth {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+  .pagelayout-standard #page.drawers .main-inner,
+  body.limitedwidth #page.drawers .main-inner,
+  #page.drawers .main-inner,
+  .containerx,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 95%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .header-maxwidth {
+    max-width: 100%;
+  }
+}
+.secondary-navigation {
+    position: relative;
+    z-index: 100;
+}
+
+.secondary-navigation > .containerx {
+  padding: 0;
+}
+
+.dropdown-menu.show {
+    z-index: 150 !important;
+    position: absolute !important;
+}
+
+
+@media (min-width: 1400px) {
+  .dropdown-menu-xxl-start {
+    --bs-position: start;
+  }
+  .dropdown-menu-xxl-start[data-bs-popper] {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-xxl-end {
+    --bs-position: end;
+  }
+  .dropdown-menu-xxl-end[data-bs-popper] {
+    right: 0;
+    left: auto;
+  }
+}
+.content-i{
+.table > :not(caption) > * > *{
+    padding: 0rem 0rem;
+}
+}
+
+.stickyfooter {
+    position: inherit;
+    box-shadow: none;
+    bottom:inherit;
+}
+.hasstickyfooter .drawer-left, .hasstickyfooter .drawer-right {
+    top: 60px;
+    height: inherit;
+}
+
+.icon-back-in-drawer, .collapsed-icon-container, .text-muted, .collapsed-icon {
+  .dir-ltr-hide{
+  display: none;
+}
+}
+#page-wrapper {
+    height: auto;
+}
+// #topofscroll {
+//   &.main-inner {
+//   margin: 0;
+//   padding: 0;
+//   }
+// }
+
+.single-section{
+  ul{
+    position: inherit;
+  }
+}
+#page.drawers.show-drawer-left.show-drawer-right{
+  margin: auto !important;
+}
+#page.drawers.show-drawer-left{
+  padding-left: 20rem;
+  overflow: hidden;
+  margin-left: 0;
+}
+
+
+#page.drawers.show-drawer-right {
+  padding-right: 20rem;
+  overflow: hidden;
+  margin-right: 0;
+}
+
+.drawer .message-app{
+  padding-top: 1rem;
+}
+
+.single-section{
+  .dropdown-menu.show{
+    position: relative !important;
+    transform: inherit !important;
+  }
+}
+.course-content-item-content.collapse.show ul {
+    padding: 1rem !important;
+}
+.bulkenabled .course-section-header .bulkselect {
+  left: 4.5rem;
+  position: absolute;
+}
+
+/* Apply styles to section only if it contains .activity-item */
+section:has(.activity-item) {
+  background: aliceblue;
+  border-radius: 1rem;
+  accent-color: var(--background-color);
+}
+
+/* Apply styles only if .nextsection contains an <a> tag */
+.nextsection:has(a), .prevsection:has(a) {
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 13px;
+}
+.jumpmenu{padding-top: 10px;}
+
+/* Targeting the entire <li> element with a specific class */
+.activity.modtype_forum.hasinfo {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 10px;
+}
+.course-section .availabilityinfo {
+padding: 1.25rem 1rem;
+}
+
+.editing .activity, .section .activity:first-child {
+  padding: 1rem;
+}
+
+/* Ensure that the wrapper is positioned fixed on the right */
+.completion-bar-wrapper {
+    display: flex;
+    justify-content: flex-end;  /* Align the bar to the right */
+    align-items: center; 
+    transform: translateY(-50%); /* Center vertically */
+    margin: 1rem 0;
+    // width: 200px;  /* Adjust the width of the progress bar */
+}
+
+/* Base styles for the completion bar */
+.completion-bar {
+    background-color: #f0f0f0;  /* Light gray background */
+    border-radius: 6px;  /* Rounded corners */
+    height: 20px;  /* Set the height of the bar */
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: Add a subtle shadow */
+}
+
+/* Progress inside the bar */
+.completion-progress {
+    background-color: var(--accent-color);  /* You can use a theme color or custom color */
+    height: 100%;
+    border-radius: 6px;  /* Match the bar's rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: width 0.3s ease;  /* Smooth transition */
+    min-width: 3%;
+}
+
+/* Display the percentage inside the progress bar */
+.completion-percentage {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
