@@ -5,49 +5,37 @@ LiteAp is a design-centric, customizable Moodle theme for educational institutio
 ## Theme Directory Structure
 
 The LiteAp theme directory structure is organized for easy customization and extension:
-theme/liteap/
-├── config.php
-├── lib.php
-├── settings.php
-├── version.php
-│
-├── classes/
-│ ├── output/core_renderer.php
-│ └── util/settings.php
-│ └── privacy/provider.php
-├── lang/en/theme_nren.php
-│
-├── layout/
-│ ├── frontpage.php
-│ ├── drawers.php
-│ └── dashboard.php
-│
-├── templates/
-│ ├── frontpage.mustache
-│ ├── drawers.mustache
-│ ├── navbar.mustache
-│ ├── footer.mustache
-│ └── core/loginform.mustache
-│
-├── scss/
-│ ├── main.scss
-│ └── default/
-│ ├── default.scss
-│ ├── plain.scss
-│ ├── _variables.scss
-│ ├── _frontpage.scss
-│ ├── _footer.scss
-│ ├── _navbar.scss
-│ └── _login.scss
-│
-├── assets/
-│ ├── bootstrap.bundle.min.js
-│ ├── bootstrap.min.css
-│ └── fonts/
-│
-└── amd/
-├── src/Myschool.js
-└── build/
+| Directory/File                        | Type     | Description                                     |
+|---------------------------------------|----------|-------------------------------------------------|
+| `config.php`                          | File     | Configuration file for the theme                |
+| `lib.php`                             | File     | Library file containing helper functions        |
+| `settings.php`                        | File     | Theme settings file                             |
+| `version.php`                         | File     | Version information of the theme                |
+| `classes/output/core_renderer.php`    | File     | Custom renderer for the theme's core output     |
+| `classes/util/settings.php`           | File     | Utility functions for settings handling         |
+| `classes/privacy/provider.php`        | File     | Privacy provider for handling data privacy      |
+| `lang/en/theme_nren.php`              | File     | Language file for theme text and strings        |
+| `layout/frontpage.php`                | File     | Layout template for the front page              |
+| `layout/drawers.php`                  | File     | Layout template for side drawers                |
+| `layout/dashboard.php`                | File     | Layout template for the dashboard               |
+| `templates/frontpage.mustache`        | File     | Mustache template for the front page            |
+| `templates/drawers.mustache`          | File     | Mustache template for the side drawers          |
+| `templates/navbar.mustache`           | File     | Mustache template for the navbar                |
+| `templates/footer.mustache`           | File     | Mustache template for the footer                |
+| `templates/core/loginform.mustache`   | File     | Mustache template for the login form            |
+| `scss/main.scss`                      | File     | Main SCSS file for theme styling                |
+| `scss/default/default.scss`           | File     | Default SCSS file for theme styling             |
+| `scss/default/plain.scss`             | File     | Plain SCSS file for minimal styling             |
+| `scss/default/_variables.scss`        | File     | SCSS variables for theming                      |
+| `scss/default/_frontpage.scss`        | File     | SCSS for frontpage-specific styles              |
+| `scss/default/_footer.scss`           | File     | SCSS for footer-specific styles                 |
+| `scss/default/_navbar.scss`           | File     | SCSS for navbar-specific styles                 |
+| `scss/default/_login.scss`            | File     | SCSS for login page-specific styles             |
+| `assets/bootstrap.bundle.min.js`      | File     | Minified Bootstrap JS bundle                    |
+| `assets/bootstrap.min.css`            | File     | Minified Bootstrap CSS file                     |
+| `assets/fonts/`                       | Folder   | Contains font files used in the theme           |
+| `amd/src/Myschool.js`                 | File     | JavaScript source for theme functionality       |
+| `amd/build/`                          | Folder   | Contains the built JavaScript files             |
 
 ## Front Page Sections
 
