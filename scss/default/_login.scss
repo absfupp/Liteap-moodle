@@ -187,13 +187,13 @@
         }
     }
 }.signupform i .fa-circle-exclamation::before {
-  content: "" !important;
+  content: "*" !important;
   vertical-align: super; 
   font-size: x-small;
 }
 
 #page-content .fa-circle-exclamation{
-    --fa: "" !important;
+    --fa: "*" !important;
     font-size: x-small;
     vertical-align: super;
 }
