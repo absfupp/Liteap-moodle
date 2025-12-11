@@ -115,7 +115,7 @@ class settings
         $default_signup_url = $CFG->wwwroot . '/login/signup.php'; // Default registration URL
 
         // If the setting is enabled and the user is not logged in
-        if ($userregister_enabled && !isloggedin()) {
+        if ($userregister_enabled && (!isloggedin() || isguestuser())) {
             // Add the default signup URL to the template context
             $templatecontext['userregisterurl'] = $default_signup_url;
             $templatecontext['userregister'] = true; // Show the registration link
